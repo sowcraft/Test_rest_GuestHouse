@@ -1,0 +1,26 @@
+<div class="container">
+    <br>
+
+    <h2>Room: {{roomNumber}} <small>{{type}}</small></h2> 
+    <div class="alert alert-success">
+        Service in room:
+        <ul>
+            <li>Type of service: <strong>{{service.serviceType}}</strong> </li>
+            <li>Price: <strong>{{service.price}}</strong></li>
+            <li>Status: <strong>{{service.status}}</strong></li>
+        </ul>
+    </div>
+
+    <h5>Rules of settlement:</h5>
+    <div class="alert alert-warning">
+    <ul>
+        <li *ngFor="let set of settlementRules; let i=index">{{i+1}}-{{set}}</li>
+    </ul>
+    </div>
+
+    <h5>Choose the room</h5>
+    <button class="btn btn-danger btn-lg" (click)="serviceSelect()">901</button>
+    <button class="btn btn-danger btn-lg" (click)="serviceSelect()">902</button>
+    <button class="btn btn-danger btn-lg" (click)="serviceSelect()">910</button>
+
+</div>
